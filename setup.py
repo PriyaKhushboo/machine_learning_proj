@@ -3,7 +3,7 @@ from typing import List
 
     
 # declaring variable for setup functions
-PROJECT_NAME= "housing-predictor"
+PROJECT_NAME= "housing-predictor-project"
 VERSION="0.0.1"
 AUTHOR="Khushboo Singh"
 DESCRIPTION="This is the first end to end project"
@@ -13,7 +13,7 @@ REQUIREMENT_FILE_NAME = "requirements.txt"
 
 def get_requirements_list()->List[str]: #This function will return the list which have string value in it
     with open(REQUIREMENT_FILE_NAME) as  requireme_file:
-        requireme_file.readlines()
+        requireme_file.readlines().remove("-e .")
 
 setup(
 name = PROJECT_NAME,
