@@ -12,7 +12,7 @@ REQUIREMENT_FILE_NAME = "requirements.txt"
 
 
 def get_requirements_list()->List[str]: #This function will return the list which have string value in it
-    with open(REQUIREMENT_FILE_NAME) as  requireme_file:
+    with open(REQUIREMENT_FILE_NAME) as  requirement_file:
         requireme_file.readlines().remove("-e .")
 
 setup(
